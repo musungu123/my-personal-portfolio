@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Joyce | Developer Portfolio</title>
+  <meta name="description" content="Portfolio of Joyce, a beginner developer building fast, accessible websites." />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👋</text></svg>" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: { extend: { colors: { ink: "#14213d", paper: "#eef2f6", cobalt: "#2f5bff", mint: "#cfebdd" } } }
+    };
+  </script>
+  <!-- FIX: relative path (no leading slash) so it also works on GitHub Pages project sites -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:m-3 focus:rounded focus:bg-ink focus:px-4 focus:py-2 focus:text-white">Skip to content</a>
+
+  <!-- Navigation -->
+  <header class="sticky top-0 z-10 border-b border-ink/10 bg-paper/90 backdrop-blur">
+    <nav class="mx-auto flex max-w-5xl xl:max-w-6xl flex-wrap items-center justify-between gap-x-6 gap-y-1 px-5 py-3 sm:py-4" aria-label="Main">
+      <a href="#home" class="font-display text-base font-bold sm:text-lg">Joyce</a>
+      <ul class="flex gap-1 text-sm font-medium sm:gap-4">
+        <li><a class="inline-block rounded px-2 py-2 hover:text-cobalt sm:px-3" href="#about">About</a></li>
+        <li><a class="inline-block rounded px-2 py-2 hover:text-cobalt sm:px-3" href="#projects">Projects</a></li>
+        <li><a class="inline-block rounded px-2 py-2 hover:text-cobalt sm:px-3" href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header><!-- FIX: this closing tag was missing, so <main> and the footer were nested inside the sticky header -->
+
+  <main id="main">
+    <!-- Hero -->
+    <section id="home" class="mx-auto grid max-w-5xl xl:max-w-6xl items-center gap-10 px-5 py-12 sm:py-20 md:grid-cols-[1fr_auto] lg:gap-16 lg:py-28">
+      <div>
+        <p class="mb-4 text-base text-ink/70">Hi, I'm Joyce, a beginner developer.</p>
+        <h1 class="text-4xl font-extrabold leading-[1.05] sm:text-5xl lg:text-6xl">
+          I build websites that load fast and <span class="underline-draw">work for everyone.</span>
+        </h1>
+        <p class="mt-6 max-w-xl text-lg leading-relaxed text-ink/80">
+          I turn designs into clean, accessible interfaces using semantic HTML, modern CSS and a small amount of JavaScript.
+        </p>
+        <div class="mt-9 flex flex-wrap gap-3">
+          <a href="#projects" class="w-full rounded-lg bg-cobalt px-6 py-3 text-center font-medium text-white transition hover:bg-ink sm:w-auto">View my projects</a>
+          <a href="#contact" class="w-full rounded-lg border-2 border-ink px-6 py-3 text-center font-medium transition hover:bg-ink hover:text-white sm:w-auto">Contact me</a>
+        </div>
+      </div>
+      <!-- FIX: one photo only, with the responsive sizing classes. The duplicate <img src=""> was the stray text. -->
+      <img src="https://plus.unsplash.com/premium_photo-1759570236590-d00339dabc0f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTl8fHBhc3Nwb3J0JTIwcGhvdG98ZW58MHx8MHx8fDA%3D"
+        alt="Portrait of Joyce"
+        class="order-first mx-auto h-36 w-36 rounded-full object-cover sm:h-48 sm:w-48 md:order-last md:h-56 md:w-56 lg:h-64 lg:w-64">
+    </section>
+
+    <!-- About -->
+    <section id="about" class="bg-ink py-16 text-paper sm:py-24">
+      <div class="mx-auto grid max-w-5xl xl:max-w-6xl gap-12 px-5 md:grid-cols-2 lg:gap-20">
+        <div>
+          <h2 class="text-3xl font-bold sm:text-4xl">About me</h2>
+          <p class="mt-6 leading-relaxed text-paper/85">
+            I'm a beginner developer working towards gaining more experience in building marketing sites, dashboards and web apps. I care about performance, accessibility and code that the next person can read.
+          </p>
+          <p class="mt-4 leading-relaxed text-paper/85">
+            Outside of work I like doing research, having fun with friends and family, and keeping up with fast-growing market sectors.
+          </p>
+        </div>
+        <div>
+          <h3 class="text-xl font-bold">Skills</h3>
+          <ul class="mt-5 flex flex-wrap gap-2">
+            <li class="rounded-full bg-paper/10 px-4 py-1.5 text-sm">HTML5</li>
+            <li class="rounded-full bg-paper/10 px-4 py-1.5 text-sm">CSS3</li>
+            <li class="rounded-full bg-paper/10 px-4 py-1.5 text-sm">Tailwind CSS</li>
+            <li class="rounded-full bg-paper/10 px-4 py-1.5 text-sm">JavaScript</li>
+            <li class="rounded-full bg-paper/10 px-4 py-1.5 text-sm">Responsive design</li>
+            <li class="rounded-full bg-paper/10 px-4 py-1.5 text-sm">Git &amp; GitHub</li>
+          </ul>
+          <h3 class="mt-9 text-xl font-bold">Experience</h3>
+          <dl class="mt-4 space-y-4">
+            <div>
+              <dt class="font-medium">Beginner Developer, Moringa School</dt>
+              <dd class="text-sm text-paper/70">July to present</dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="mx-auto max-w-5xl xl:max-w-6xl px-5 py-16 sm:py-24">
+      <h2 class="text-3xl font-bold sm:text-4xl">Selected projects</h2>
+      <p class="mt-3 max-w-xl text-ink/75">A few things I've built recently. Each links to the live site and the source code.</p>
+
+      <div class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <article class="flex flex-col rounded-2xl border border-ink/15 bg-white p-6">
+          <div class="mb-5 flex h-36 items-center justify-center rounded-lg bg-mint font-display text-2xl font-bold" aria-hidden="true">Photography</div>
+          <h3 class="text-xl font-bold">Pictures</h3>
+          <p class="mt-2 flex-1 text-sm leading-relaxed text-ink/75">Captured Forever is a visually optimized web application built to host a curated series of photographic imagery. Inspired by the philosophy of Aaron Siskind, this platform acts as an architectural visual framework designed to balance responsive structural elements with crisp typographical hierarchy.</p>
+          <p class="mt-4 text-xs font-medium text-cobalt">HTML, CSS</p>
+          <div class="mt-4 flex gap-4 text-sm font-medium">
+            <a class="underline hover:text-cobalt" href="https://musungu123.github.io/photography-portfolio/">Live site</a>
+            <a class="underline hover:text-cobalt" href="https://github.com/musungu123/photography-portfolio">Source code</a>
+          </div>
+        </article>
+
+        <article class="flex flex-col rounded-2xl border border-ink/15 bg-white p-6">
+          <div class="mb-5 flex h-36 items-center justify-center rounded-lg bg-cobalt font-display text-2xl font-bold text-white" aria-hidden="true">Travel Agency</div>
+          <h3 class="text-xl font-bold">African Kismat Expeditions</h3>
+          <p class="mt-2 flex-1 text-sm leading-relaxed text-ink/75">A dynamic, fully responsive Travel &amp; Tourism website designed to showcase luxury safari packages, destinations, and travel planning across East Africa.</p>
+          <p class="mt-4 text-xs font-medium text-cobalt">HTML, CSS, JavaScript</p>
+          <div class="mt-4 flex gap-4 text-sm font-medium">
+            <a class="underline hover:text-cobalt" href="https://humphrey-developer.github.io/AfricanKismatExpenditions/">Live site</a>
+            <a class="underline hover:text-cobalt" href="https://github.com/humphrey-developer/AfricanKismatExpenditions">Source code</a>
+          </div>
+        </article>
+
+        <article class="flex flex-col rounded-2xl border border-ink/15 bg-white p-6 sm:col-span-2 lg:col-span-1">
+          <div class="mb-5 flex h-36 items-center justify-center rounded-lg bg-ink font-display text-2xl font-bold text-paper" aria-hidden="true">Name Generator</div>
+          <h3 class="text-xl font-bold">Akan Name Generator</h3>
+          <p class="mt-2 flex-1 text-sm leading-relaxed text-ink/75">The Akan Name Generator is a modern web application that calculates the day of the week a user was born and assigns them an authentic Akan name based on Ghanaian naming traditions. In Akan culture, children are given names corresponding to their day of birth and gender.</p>
+          <p class="mt-4 text-xs font-medium text-cobalt">HTML, CSS, JavaScript</p>
+          <div class="mt-4 flex gap-4 text-sm font-medium">
+            <a class="underline hover:text-cobalt" href="https://musungu123.github.io/Akan-name-generator/">Live site</a>
+            <a class="underline hover:text-cobalt" href="https://github.com/musungu123/Akan-name-generator">Source code</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="bg-mint py-16 sm:py-24">
+      <div class="mx-auto grid max-w-5xl xl:max-w-6xl gap-10 px-5 md:grid-cols-2 lg:gap-20">
+        <div>
+          <h2 class="text-3xl font-bold sm:text-4xl">Let's work together</h2>
+          <p class="mt-4 max-w-md leading-relaxed text-ink/80">Have a project or a role in mind? Send a message and I'll reply within two working days.</p>
+          <ul class="mt-6 space-y-2 font-medium">
+            <li><a class="underline hover:text-cobalt" href="mailto:hello@example.com" style="overflow-wrap:anywhere">hello@example.com</a></li>
+            <li><a class="underline hover:text-cobalt" href="https://github.com/">GitHub</a></li>
+            <li><a class="underline hover:text-cobalt" href="https://linkedin.com/">LinkedIn</a></li>
+          </ul>
+        </div>
+
+        <!-- TODO: an empty action posts to this same page, which static hosting rejects. Paste your Formspree URL here. -->
+        <form action="https://formspree.io/f/your-form-id" method="POST" class="space-y-4">
+          <div>
+            <label for="name" class="mb-1 block text-sm font-medium">Your name</label>
+            <input id="name" name="name" type="text" required autocomplete="name" class="w-full rounded-lg border border-ink/30 bg-white px-4 py-3" />
+          </div>
+          <div>
+            <label for="email" class="mb-1 block text-sm font-medium">Email address</label>
+            <input id="email" name="email" type="email" required autocomplete="email" class="w-full rounded-lg border border-ink/30 bg-white px-4 py-3" />
+          </div>
+          <div>
+            <label for="message" class="mb-1 block text-sm font-medium">Message</label>
+            <textarea id="message" name="message" rows="5" required class="w-full rounded-lg border border-ink/30 bg-white px-4 py-3"></textarea>
+          </div>
+          <button type="submit" class="w-full rounded-lg bg-ink px-6 py-3 font-medium text-white transition hover:bg-cobalt sm:w-auto">Send message</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-ink py-6 text-center text-sm text-paper/70">
+    &copy; 2026 Joyce. Built with HTML, CSS and Tailwind CSS.
+  </footer>
+</body>
+
+</html>

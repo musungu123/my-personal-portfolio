@@ -1,0 +1,35 @@
+/* Custom styles that complement Tailwind utilities */
+@import url("https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=DM+Sans:wght@400;500;700&display=swap");
+ 
+:root {
+  --ink: #14213d;
+  --paper: #eef2f6;
+  --cobalt: #2f5bff;
+  --mint: #cfebdd;
+}
+ 
+html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; scroll-padding-top: 5rem; }
+img, svg, video { max-width: 100%; height: auto; }
+body { overflow-x: hidden; font-family: "DM Sans", system-ui, sans-serif; background: var(--paper); color: var(--ink); }
+h1, h2, h3, .font-display { font-family: "Bricolage Grotesque", "DM Sans", sans-serif; letter-spacing: -0.02em; }
+ 
+/* Visible keyboard focus everywhere */
+a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible {
+  outline: 3px solid var(--cobalt);
+  outline-offset: 3px;
+}
+ 
+/* The one memorable moment: hero headline underline draws in on load */
+.underline-draw {
+  background-image: linear-gradient(var(--mint), var(--mint));
+  background-repeat: no-repeat;
+  background-position: 0 92%;
+  background-size: 100% 0.32em;
+  animation: draw 900ms 200ms ease-out both;
+}
+@keyframes draw { from { background-size: 0 0.32em; } to { background-size: 100% 0.32em; } }
+ 
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .underline-draw { animation: none; }
+}
